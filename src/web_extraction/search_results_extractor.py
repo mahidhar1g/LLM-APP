@@ -2,7 +2,13 @@ import json
 import logging
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from webpage_scraper import scrape_webpage
-from src.config import GOOGLE_API_KEY, SERPER_API_KEY
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+os.getenv("GOOGLE_API_KEY")
+os.getenv("SERPER_API_KEY")
+# from src.config import GOOGLE_API_KEY, SERPER_API_KEY
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

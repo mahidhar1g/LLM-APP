@@ -1,7 +1,10 @@
 from openai import OpenAI
-from src.config import OPENAI_API_KEY
+import os
+from dotenv import load_dotenv
 
-def get_chat_response(model: str, messages: list, api_key: str = OPENAI_API_KEY) -> str:
+load_dotenv()
+
+def get_chat_response(model: str, messages: list, api_key: str = os.getenv("OPENAI_API_KEY")) -> str:
     """
     Generates a response from the OpenAI chat model.
 

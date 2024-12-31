@@ -1,9 +1,11 @@
 from googleapiclient.discovery import build
-from src.config import GOOGLE_API_KEY
-from src.config import GOOGLE_CSE_ID
+import os
+from dotenv import load_dotenv
 
-my_api_key = GOOGLE_API_KEY #The API_KEY you acquired
-my_cse_id = GOOGLE_CSE_ID #The search-engine-ID you created
+load_dotenv()
+
+my_api_key = os.getenv("GOOGLE_API_KEY")
+my_cse_id = os.getenv("GOOGLE_CSE_ID")
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
