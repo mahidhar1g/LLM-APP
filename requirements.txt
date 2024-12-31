@@ -1,0 +1,18 @@
+flask                    # Web framework
+flask-apscheduler        # For scheduling tasks
+google-api-python-client # For integrating Google APIs
+langchain                # For building LLM applications
+openai                   # OpenAI GPT API client
+requests                 # HTTP requests library
+twilio                   # For sending WhatsApp messages
+python-dotenv            # For loading environment variables
+langchain-google-community # For using Google Community model
+langchain_openai         # For using OpenAI GPT model
+pinecone                 # For using Pinecone API
+requests-html            # For parsing HTML (Requests HTML)
+lxml_html_clean          # For cleaning HTML (lxml)
+
+
+beautifulsoup4           # For parsing HTML (Beautiful Soup)
+lxml                     # Optional, for faster HTML/XML parsing with Beautiful Soup
+urllib3                  # For handling URL parsing and HTTP requests
