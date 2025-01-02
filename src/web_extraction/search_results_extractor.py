@@ -2,7 +2,7 @@ import json
 import logging
 import re
 from langchain_community.utilities import GoogleSerperAPIWrapper
-from webpage_scraper import scrape_webpage
+from src.web_extraction.webpage_scraper import scrape_webpage
 import os
 from dotenv import load_dotenv
 
@@ -120,7 +120,6 @@ def parsing_data():
                     })
                     tempid += 1
         # Return the parsed data
-        print(parsed_data)
         return parsed_data
 
     except Exception as ex:

@@ -28,6 +28,7 @@ venv/
 build/
 dist/
 *.egg-info/
+__init__.py
 
 # Data and sensitive information
 data/
