@@ -18,7 +18,7 @@ if not GOOGLE_API_KEY or not SERPER_API_KEY:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def perform_search(query: str, num_results: int = 15) -> dict:
+def perform_search(query: str, num_results: int = 10) -> dict:
     """
     Perform a search using the Google Serper API.
 
@@ -95,7 +95,7 @@ def process_scraped_data(scraped_data: dict) -> dict:
         'content': content.strip().replace("\n", " ")
     }
 
-def main():
+def parsing_data():
     query = "Artificial Intelligence OR AI news OR AI updates OR AI advancements OR AI breakthroughs OR AI applications"
     parsed_data = []
 
@@ -120,11 +120,8 @@ def main():
                     })
                     tempid += 1
         # Return the parsed data
+        print(parsed_data)
         return parsed_data
 
     except Exception as ex:
         logger.error(f"An unexpected error occurred: {ex}")
-
-if __name__ == "__main__":
-    data = main()
-    print(json.dumps(data, indent=4, ensure_ascii=False))
